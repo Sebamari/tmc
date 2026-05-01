@@ -1,0 +1,338 @@
+@charset "UTF-8";
+
+/* ///////////////////////////////////////////////////////////////////////////////////////
+ Common
+ bodyタグ、背景、メニュー、基本レイアウト
+/////////////////////////////////////////////////////////////////////////////////////// */
+
+
+/* ========================================================
+
+ Base
+
+ ======================================================== */
+.pc {display: block;}
+.sp {display: none;}
+@media screen and (max-width: 768px) {
+    .pc {display: none;}
+    .sp {display: block;}
+}
+
+/* 文字サイズ10px相当 */
+
+html {
+    font-size: 62.5%;
+}
+  
+body {
+    font-size: 1.7rem;
+    line-height: 1.6;
+}
+  
+@media screen and (max-width: 768px) {
+
+    body {
+        /* -----------★変更★-----------*/
+        line-height: 1.5;
+        font-size: 1.8rem;
+
+    }
+}
+  
+a {
+    color: #e95894;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ef85b1;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+#cx_spContentsWrap, #fp-wrap {
+    min-width: 100% !important;
+    width: 100% !important;
+}
+
+.cx_touchdevice #cx_spContentsWrap {
+    min-width: 1200px !important;
+}
+
+.cx_touchdevice #fp-wrap {
+    width: 100%!important;
+    min-width: 1000px !important;
+}
+
+.cx_smartphoneview.cx_touchdevice #cx_spContentsWrap, .cx_smartphoneview.cx_touchdevice #fp-wrap {
+    min-width: 100% !important;
+    width: 100% !important;
+}
+
+.cx_smartphoneview #fp-wrap {
+    min-width: 100%!important;
+    width: 100% !important;
+}
+
+.cx_smartphoneview #fp-contents {
+    width: 100%!important;
+    margin: 0 auto;
+}
+
+input, textarea {
+    margin: 0;
+    padding: 0;
+}
+
+#fp-wrap h1 {
+    display: none;
+}
+
+/* ========================================================
+
+   Layout
+
+======================================================== */
+
+
+#fp-contents {
+    width: auto;
+    background-color: #f4f4f4;
+    background-image: url(/common/images/simple_bg/mainbg_023.png), url(/common/images/pattern/pat_bg_gray_005.png);
+    background-repeat: no-repeat, repeat;
+    background-position: center top, left top;
+    -webkit-background-size: 1400px 560px, auto;
+    background-size: 1400px 560px, auto;
+    max-width: 100%;
+}
+#fp-contents * {
+    box-sizing: border-box;
+}
+
+.inner {
+    width: 1200px;
+    margin: 0 auto;
+}
+.l-main {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+.flex {
+    display: -webkit-flex;
+	display: flex;
+}
+
+@media screen and (max-width: 1200px) {
+  .inner {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+    .inner {
+        width: 100%;
+    }
+
+    .l-main {
+        width: 100%;
+        padding: 0 3% 50px;
+    }
+    .no-flex{
+        display: block;
+    }
+}
+
+/* ========================================================
+
+   ナビ
+   
+ ======================================================== */
+
+.navigation-container{
+    background-color: #fff;
+}
+
+.navigation {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.navigation-inner {
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+}
+.navigation-list {
+    display: flex;
+    justify-content: space-between;
+}
+.navigation-list-item{
+    width: 33.333333333333%;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.navigation-list-item:hover{
+    opacity: 0.8;
+}
+.navigation-list-item a{
+    color: #666;
+    font-size: 2.2rem;
+}
+
+@media screen and (max-width: 768px) {
+    .navigation-list {
+        flex-wrap: wrap;
+        width: 100%;
+        row-gap: 1em;
+    }
+    .navigation-list-item{
+        width: 33.3%;
+		padding-top: 20px;
+    	padding-bottom: 20px;
+    }
+    .navigation {
+        padding: 0 3%;
+    }
+	.navigation-list-item a{
+		font-size: 2rem;
+	}
+}
+
+
+/* ========================================================
+
+   メインコンテンツ
+
+ ======================================================== */
+
+ /* ----------------------------------------
+
+　　共通
+
+ ---------------------------------------- */
+main{
+    background: #f0f0f0;
+}
+main .l-container-wrap {
+    padding: 30px 30px 15px;
+    max-width: 1200px;
+    margin: auto;
+	-webkit-box-shadow: none !important;
+  	box-shadow: none !important;
+	background: none !important;
+}
+main .l-container-wrap .title {
+	font-size: 32px;
+    text-align: center;
+	color: #999;
+	margin-bottom: 15px;
+}
+main .l-container-wrap .content{
+	margin-bottom: 60px;
+}
+@media screen and (max-width: 768px) {
+	main .l-container-wrap {
+		padding: 15px 3% 15px;
+	}
+	main .l-container-wrap .title {
+		font-size: 24px;
+	}
+	main .l-container-wrap .content {
+		margin-bottom: 32px;
+	}
+}
+ /* ----------------------------------------
+
+　　EPG（次回放送）
+
+ ---------------------------------------- */
+#premium-oaparts-oa-date .premium-oa-date{
+	color: #fff;
+    font-size: 3.2rem;
+    font-weight: bold;
+    text-shadow: 0 2px 1px rgba(0, 0, 0, .3);
+    text-align: center;
+    background-color: #2a37aa;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    padding: 1rem 0.8rem;
+    margin-bottom: 2rem;
+}
+#premium-oaparts-overview .premium-overview{
+	font-size: 1.8rem;
+    margin-bottom: 30px;
+}
+@media screen and (max-width: 768px) {
+	#premium-oaparts-oa-date .premium-oa-date{
+		font-size: 2rem;
+		padding: 1rem 0.8rem;
+		margin-bottom: 1rem;
+	}
+}
+ /* ----------------------------------------
+
+　　EPG（放送内容詳細/キャスト...）
+
+ ---------------------------------------- */
+ #premium-style-epg-layer h4{
+    font-size: min(4.7vw, 21px);
+    margin: 0 0 .7em;
+    line-height: 1.3;
+    padding: .3em 0 .3em .5em;
+    border-bottom: 2px dotted #a09699;
+    border-left: .4em solid #c9c2c2;
+    font-weight: bold;
+    border-left-color: #2a37aa;
+ }
+ #premium-style-epg-layer .premium-ph_wrap{
+    display: flex;
+    justify-content: space-between;
+    margin: 25px 0 30px;
+ }
+ @media screen and (max-width: 768px) {
+    #premium-style-epg-layer h4{
+        margin: 1.5em 0 .7em;
+        line-height: 1.3;
+    }
+    #premium-style-epg-layer .premium-ph_wrap{
+        display: block;
+        margin: 1vh 0 3vh;
+     }
+ }
+
+/* ----- EPG（放送内容詳細）----- */
+#premium-style-epg-layer .premium-detail{
+    margin: 25px 0 30px;
+}
+@media screen and (max-width: 768px) {
+    #premium-style-epg-layer .premium-detail{
+        margin: 1vh 0 3vh;
+    }
+}
+
+/* ----- EPG（キャスト）----- */
+#premium-style-epg-layer #premium-oaparts-cast{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 5vw;
+}
+#premium-style-epg-layer #premium-oaparts-cast .premium-cast{
+    width: 52.5%;
+    padding-right: 2.5%;
+}
+@media screen and (max-width: 768px) {
+    #premium-style-epg-layer #premium-oaparts-cast{
+        display: block;
+        margin-bottom: 6vw;
+    }
+    #premium-style-epg-layer #premium-oaparts-cast .premium-cast{
+        width: 100%;
+        margin-bottom: 8vw;
+    }
+}

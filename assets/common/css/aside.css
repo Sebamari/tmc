@@ -1,0 +1,545 @@
+@charset "UTF-8";
+/* //////////////////////////////////////////////////////////////////////////
+ aside
+////////////////////////////////////////////////////////////////////////// */
+.aside__inner {
+	width: 1200px;
+	margin:0 auto ;
+	overflow: hidden;
+}
+@media screen and (max-width: 1200px) {
+	.aside__inner {
+	width: 94%;
+}
+}
+.aside__inner a {
+	color: #000;
+}
+#contents-aside *,fp-aside * {
+	box-sizing: border-box;
+}
+@media screen and (max-width: 768px) {
+.aside__inner {
+		width: 100%;
+	}
+}
+
+/* ========================================================
+contents-aside
+ ======================================================== */
+#contents-aside {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "游ゴシック Medium", YuGothic, YuGothicM, メイリオ, Meiryo, sans-serif;
+	background: #fff;
+	padding: 60px 0 0;
+}
+#contents-aside .aside-bnr {
+	text-align: center;
+	padding-bottom: 60px;
+	padding-top: 0 !important;
+}
+@media screen and (max-width: 1000px) {
+#contents-aside .aside-bnr {
+	padding: 0 15px;
+	padding-bottom: 15.63vw;
+}
+}
+@media screen and (max-width: 768px) {
+#contents-aside .aside-bnr {
+	padding: 0;
+	padding-bottom: 10.42vw;
+}
+}
+#contents-aside .aside__inner {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+#contents-aside .d-aside__content {
+	width: 47.5%;
+	margin-bottom: 4.42vw;
+}
+@media screen and (max-width: 768px) {
+#contents-aside .d-aside__content {
+	margin-bottom: 10.42vw;
+}
+}
+#contents-aside h2 {
+	color: #000;
+	font-size: 2rem;
+	font-weight: bold;
+	border-bottom: 3px solid #c4c4c4;
+	position: relative;
+	padding: 0 0 10px 0;
+	margin: 0 0 8px 0;
+	text-align: left;
+}
+#contents-aside h2::after {
+	position: absolute;
+	content: " ";
+	display: block;
+	border-bottom: solid 3px #eb3353;
+	bottom: -3px;
+	width: 10em;
+}
+#contents-aside .bg__icon::before {
+	content: "";
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    left: 0;
+}
+#contents-aside #aside-message .bg__icon::before {
+	top: 2px;
+}
+#contents-aside #aside-prebo .bg__icon::before {
+	top: 4px;
+}
+#contents-aside #aside-program .bg__icon::before {
+	top: 11px;
+}
+#contents-aside .bg__icon::after {
+	content: "";
+    width: 10px;
+    height: 17px;
+	background: url(/common/images/aside/arrow_red.png) no-repeat top left / contain;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+	-webkit-transform:translateY(-50%);
+    transform: translateY(-50%);
+}
+
+/* 公式SNSアカウント */
+#contents-aside #aside-sns ul {
+	text-align: center;
+	padding-top: 30px;
+	width: 100%;	
+}
+#contents-aside #aside-sns li {
+	display: inline-block;
+	margin-right:5px;
+	width: 15%;
+}
+#contents-aside #aside-sns li:last-child{
+	margin-right:0;
+}
+#contents-aside #aside-sns li a {
+	width: 100%;
+}
+#contents-aside #aside-sns li img {
+	width: 90%;
+	border-radius: 50%;
+}
+
+
+
+/* 番組へのメッセージ */
+#contents-aside #aside-message h4 {
+	border-bottom: 1px dotted #b0b0b0;
+	font-weight: bold;
+	padding: 12px 35px 12px 55px;
+	position: relative;
+	cursor: pointer;
+	color: #000;
+}
+#contents-aside #aside-message h4::before {
+	content: "";
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    left: 0;
+	top: 2px;
+	background: url(/common/images/aside/icon_mail.png) no-repeat top left / contain;
+}
+#contents-aside #aside-message h4::after {
+	content: "";
+    width: 17px;
+    height: 17px;
+    background: url(/common/images/aside/arrow_red.png) no-repeat top left / contain;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+	transform: rotate(90deg);
+	margin-top: -8.5px;
+}
+#contents-aside #aside-message h4:hover{
+	color: #ef85b1;
+}
+#contents-aside #aside-message h4.open::after {
+    top: 40%;
+    transform: rotate(-90deg);
+}
+#contents-aside #aside-message .txt {
+	margin-top: 10px;
+	color: #000;
+}
+#contents-aside #aside-message .msgBtn {
+	margin-top: 25px;
+	display: flex;
+	width: 100%;
+	justify-content: center;
+}
+#contents-aside #aside-message .msgBtn li{
+	width: 46%;
+}
+#contents-aside #aside-message .msgBtn li:first-of-type {
+	margin-right: 20px;
+}
+#contents-aside #aside-message .msgBtn li a {
+	display: block;
+	width: 100%;
+	border: 2px solid #eb3353;
+	border-radius: 60px;
+	color: #eb3353;
+	font-weight: bold;
+	text-align: center;
+	padding: 18px 25px;
+	position: relative;
+	transition: .5s;
+}
+#contents-aside #aside-message .msgBtn li a::after {
+	content: "";
+    width: 7px;
+    height: 12px;
+	background: url(/common/images/aside/arrow_red.png) no-repeat top left / contain;
+    position: absolute;
+    top: 50%;
+    right: 17px;
+	-webkit-transform:translateY(-50%);
+    transform: translateY(-50%);
+}
+#contents-aside #aside-message .msgBtn li a:hover {
+	background: #eb3353;
+	color: #fff;
+}
+#contents-aside #aside-message .msgBtn li a:hover::after {
+	background: url(../img/arrow_white.png) no-repeat top left / contain;
+}
+
+/* プレゼント募集情報 */
+#contents-aside #aside-prebo ul li {
+	border-bottom: 1px dotted #b0b0b0;
+}
+#contents-aside #aside-prebo ul li a {
+	display: block;
+	padding: 15px 30px 15px 55px;
+	position: relative;
+	cursor: pointer;
+	font-weight: bold;
+}
+#contents-aside #aside-prebo ul li.recruit a::before {
+	background: url(/common/images/aside/icon_megaphone.png) no-repeat top left / contain;
+}
+#contents-aside #aside-prebo ul li.present a::before {
+	background: url(/common/images/aside/icon_present.png) no-repeat top left / contain;
+}
+#contents-aside #aside-prebo a::after {
+    width: 17px;
+    transform: rotate(90deg);
+    margin-top: -8.5px;
+	top: 60%;
+}
+#contents-aside #aside-prebo ul li .accordion-content{
+	color: #000;
+	display: none;
+	padding-top: 7PX;
+	padding-bottom: 7px;
+    border-top: 1px dotted #b0b0b0;
+}
+#contents-aside #aside-prebo ul li .bg__icon.open::after{
+	top: 40%;
+    transform: rotate(-90deg);
+}
+#contents-aside #aside-prebo .present a:hover{
+	color: #ef85b1;
+}
+#contents-aside #aside-prebo ul li .txt,
+#contents-aside #aside-prebo ul li p.apply{
+	margin-top: 7px;
+}
+#contents-aside #aside-prebo ul li p.apply a{
+	border: 1px solid #d94c63;
+    border-radius: 8px;
+    display: inline-block;
+    padding: 10px 25px 10px 25px;
+    color: #d94c63;
+}
+#contents-aside #aside-prebo ul li p.apply a:hover{
+	border: 1px solid #d94c63;
+	background-color: #d94c63;
+    color: #fff;
+}
+#contents-aside #aside-prebo ul li .not-availabl{
+	background: #eee;
+    border-radius: 5px;
+    padding: 7px;
+}
+#contents-aside #aside-prebo ul li p.apply img{
+	margin-bottom: 5px;
+}
+
+#contents-aside #aside-prebo ul li .txt a{
+	padding: 0 !important;
+    display: inline-block !important;
+    text-decoration: underline !important;
+    color: #eb3353 !important;
+}
+
+/* 番組関連情報 */
+#contents-aside #aside-program h2 {
+	margin-bottom: 25px;
+}
+#contents-aside #aside-program ul li a {
+	display: flex;
+    align-items: center;
+    justify-content: space-between;
+	border: 1px solid #c4c4c4;
+	border-radius: 8px;
+	font-weight: bold;
+	margin-top: 15px;
+	padding: 20px;
+	position: relative;
+}
+#contents-aside #aside-program ul li a div{
+	display: flex;
+    align-items: center;
+	font-weight: bold;
+}
+#contents-aside #aside-program ul li a div:hover{
+	color: #ef85b1;
+}
+#contents-aside #aside-program ul li a div .i__img{
+	width: 44px;
+    height: 44px;
+    margin-right: 10px;
+}
+#contents-aside #aside-program ul li a::before {
+    left: 10px;
+}
+#contents-aside #aside-program ul li a::after {
+    /*right: 20px;*/
+	display: none;
+}
+#contents-aside #aside-program ul li.stream a::before {
+	/*background: url(../img/icon_phone.png) no-repeat top left / contain;/*/
+	display: none;
+}
+#contents-aside #aside-program ul li.goods a::before {
+	/*background: url(../img/icon_cart.png) no-repeat top left / contain;*/
+	display: none;
+}
+
+/* Tverバナー　リアルタイム配信 */
+#contents-aside .tver__bnr {
+	margin-bottom: 60px;
+}
+
+@media screen and (max-width: 768px) {
+#contents-aside {
+	padding: 10.42vw 3.26vw 0;
+}
+#contents-aside .aside__inner {
+	display: block;
+}
+#contents-aside .d-aside__content {
+	width: 100%;
+}
+#contents-aside #aside-sns ul {
+	padding-top: 20px;
+}
+#contents-aside #aside-sns li a {
+	width: 82px;
+}
+#contents-aside #aside-sns li img {
+	width: 72px;
+}
+#contents-aside #aside-message h3 {
+	padding: 12px 35px 12px 60px;
+}
+
+#contents-aside #aside-message .msgBtn li{
+	width: 49%;
+}
+#contents-aside #aside-message .msgBtn li:first-of-type {
+	margin-right: 2%;
+}
+ #contents-aside #aside-message .msgBtn li a {
+	width: 100%;
+	padding: 3.26vw 0;
+}
+#contents-aside #aside-message .msgBtn li a::after {
+	content: "";
+    width: 1.3vw;
+    height: 2.21vw;
+	background: url(/common/images/aside/arrow_red.png) no-repeat top left / contain;
+    position: absolute;
+    top: 50%;
+    right: 2.6vw;
+}
+#contents-aside .bg__icon::before {
+	width: 54px;
+	height: 54px;
+}
+#contents-aside #aside-prebo ul li a {
+	padding: 15px 30px 15px 60px;
+}
+#contents-aside #aside-program ul li a {
+	padding: 20px;
+}
+#contents-aside .tver__bnr {
+	margin-bottom: 15.63vw;
+}
+}
+/*.cx_smartphoneview #contents-aside .tver__bnr {
+	width: 100%;
+}*/
+
+/* ========================================================
+contents-aside
+ ======================================================== */
+ #cx_spContentsWrap .aside-bnr{
+	text-align: center;
+	padding-top: 60px;
+ }
+
+/* ========================================================
+fp-aside
+ ======================================================== */
+#fp-aside {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "游ゴシック Medium", YuGothic, YuGothicM, メイリオ, Meiryo, sans-serif;
+	padding: 60px 0;
+	background: #eee;
+}
+#fp-aside h2 {
+	color: #000;
+	font-weight: bold;
+	font-size: 1.9rem;
+	padding: 0;
+	margin: 0 0 15px 0;
+	text-align: left;
+}
+#fp-aside .aside__content:first-of-type {
+	margin-bottom: 45px;
+}
+#fp-aside p {
+	font-size: 1.4rem;
+}
+#fp-aside ul {
+	display: flex;
+}
+#fp-aside ul li {
+	width: 18.4%;
+	padding-right: 2%;
+}
+#fp-aside ul li:last-child {
+	padding-right: 0;
+}
+#fp-aside h3 {
+	font-size: 1.5rem;
+	font-weight: bold;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+}
+#fp-aside #fp-aside-ichioshi h3 {
+	-webkit-line-clamp: 1;
+	line-clamp: 1;
+}
+#fp-aside #fp-aside-tmctvview h3 {
+	-webkit-line-clamp: 2;
+	line-clamp: 2;
+}
+#fp-aside ul li figure img {
+	display: block;
+	width: 100%;
+	height: auto;
+	aspect-ratio: 16 / 9;
+	object-fit: contain;
+	background-color: #000;
+	margin-bottom: 5px;
+	font-size: 1rem;
+	color: #ddd;
+}
+#fp-aside #fp-aside-ichioshi a:hover{
+	color: #ef85b1;
+}
+#fp-aside #fp-aside-tmctvview a:hover{
+	color: #ef85b1;
+}
+#fp-aside ul li .oatime {
+	color: #eb3353;
+}
+
+/* レクタングルバナー */
+#fp-rectangleArea {
+	margin-top: 70px;
+}
+#fp-rectangleArea .fp-rectangleBnr {
+	display: flex;
+	justify-content: center;
+}
+#fp-rectangleArea .fp-rectangleBnr p {
+	width: 300px;
+	margin: 0 20px;
+	padding: 10px 0;
+	text-align: center;
+}
+
+@media screen and (max-width: 1200px) {
+#fp-aside ul li {
+	padding-right: 2%;
+}
+}
+@media screen and (max-width: 1000px) {
+#fp-aside {
+	padding: 60px 0;
+
+}
+}
+
+@media screen and (max-width: 768px) {
+#fp-aside {
+	padding: 10.42vw 3.26vw;
+
+}
+#fp-aside ul {
+	display: block;
+	margin-right: 0;
+}
+#fp-aside ul li {
+	width: inherit;
+	padding: 20px 10px;
+	border-bottom: 1px dotted #545454;
+}
+#fp-aside ul li:first-of-type {
+	padding-top: 0;
+}
+#fp-aside ul li figure {
+	margin-bottom: 0;
+	display: flex;
+}
+#fp-aside ul li figure img {
+	width: 35%;
+	margin-bottom: 0px;
+}
+#fp-aside ul li figcaption {
+	width: 61%;
+	margin-left: 4%;
+}
+/* #fp-aside #fp-aside-ichioshi figure img,
+#fp-aside #fp-aside-tmctvview figure img {
+	height: auto;
+	aspect-ratio: auto;
+	object-fit: fill;
+} */
+#fp-rectangleArea .fp-rectangleBnr {
+	display: block;
+}
+#fp-rectangleArea .fp-rectangleBnr p {
+	width: 90%;
+	margin: 0 auto;
+}
+#fp-rectangleArea .fp-rectangleBnr p img {
+	width: 100%;
+}
+}
